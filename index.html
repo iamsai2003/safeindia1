@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAFE INDIA: Women Safety App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom animations consolidated from components */
+        @keyframes pulse-red {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+            50% { box-shadow: 0 0 0 1.25rem rgba(239, 68, 68, 0); }
+        }
+        .animate-pulse-red {
+            animation: pulse-red 2s infinite;
+        }
+
+        @keyframes move-responder-1 {
+          0% { transform: translate(0, 0); }
+          50% { transform: translate(40px, 20px); }
+          100% { transform: translate(0, 0); }
+        }
+        .animate-move-responder-1 {
+          animation: move-responder-1 8s ease-in-out infinite;
+        }
+
+        @keyframes move-responder-2 {
+          0% { transform: translate(0, 0); }
+          50% { transform: translate(-30px, -15px); }
+          100% { transform: translate(0, 0); }
+        }
+        .animate-move-responder-2 {
+          animation: move-responder-2 7s ease-in-out infinite alternate;
+        }
+
+        @keyframes fly-in-drone {
+            0% { top: -10%; right: -10%; opacity: 0; transform: scale(0.5) rotate(-45deg); }
+            30% { opacity: 1; transform: scale(1) rotate(0deg); }
+            100% { top: 40%; right: 40%; opacity: 1; transform: scale(1) rotate(0deg); }
+        }
+        .animate-fly-in-drone {
+            animation: fly-in-drone 10s ease-out forwards;
+        }
+
+        @keyframes fade-in {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+        .animate-fade-in {
+          animation: fade-in 0.3s ease-in-out;
+        }
+        
+        @keyframes slide-up {
+          from { transform: translateY(20px); opacity: 0; }
+          to { transform: translateY(0); opacity: 1; }
+        }
+        .animate-slide-up {
+            animation: slide-up 0.3s ease-out;
+        }
+
+        @keyframes slide-in-from-right {
+          from { transform: translateX(100%); }
+          to { transform: translateX(0); }
+        }
+        .animate-slide-in-from-right {
+          animation: slide-in-from-right 0.3s ease-out;
+        }
+    </style>
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://aistudiocdn.com/react@^19.2.0",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+        "react/": "https://aistudiocdn.com/react@^19.2.0/",
+        "@google/genai": "https://aistudiocdn.com/@google/genai@^1.25.0"
+      }
+    }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>

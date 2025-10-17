@@ -1,0 +1,8 @@
+{
+  "name": "Copy of SAFE INDIA: Women Safety App",
+  "description": "A web application designed to enhance women's safety by providing emergency alerts, simulated live tracking, and quick access to safety tips and emergency contacts.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
